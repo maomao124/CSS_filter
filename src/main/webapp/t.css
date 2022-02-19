@@ -1,0 +1,94 @@
+/*
+  Project name(项目名称)：CSS_filter 
+  File name(文件名): t
+  Author(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/2/19 
+  Time(创建时间)： 13:09
+  Version(版本): 1.0
+  Description(描述)：
+  滤镜	描述
+none	默认值，表示没有效果
+blur(px)	为图像设置高斯模糊，默认值为 0，单位为像素，值较大越模糊
+brightness(%)	调整图像的亮度，默认值为 100％，代表原始图像；0％ 表示没有亮度，图像将完全变黑；当值超过 100％ 时图像将变得更亮
+contrast(%)	调整图像的对比度，默认值为 100％，代表原始图像；0％ 将使图像完全变黑；当值超过 100％ 时图像将获得更高的对比度
+drop-shadow(h-shadow v-shadow blur spread color)	为图像添加阴影效果，参数说明如下：
+h-shadow：必填值，指定水平方向阴影的像素值，若值为负，则阴影会出现在图像的左侧；
+v-shadow：必填值，指定垂直方向阴影的像素值，若值为负，则阴影会出现在图像的上方；
+blur：可选值，为阴影添加模糊效果，默认值为 0，单位为像素，值越大创建的模糊就越多（阴影会变得更大更亮），不允许使用负值；
+spread：可选值，默认值为 0，单位为像素。若值为正，则阴影将会扩展并增大；若值为负，则阴影会缩小；
+color：可选值，为阴影添加颜色，如未指定，则由浏览器来绝对，通常为黑色。
+注意：Chrome、Safari 和 Opera 等浏览器不支持第 4 个参数，如果添加，则不会有任何效果
+grayscale(%)	将图像转换为灰度图像，默认值为 0%，表示原始图像；100％ 表示将图像完全变成灰度图像（即黑白图像），不允许为负值
+hue-rotate(deg)	给图像应用色相旋转，该值用来定义色环的度数，默认值为 0deg，代表原始图像，最大值为 360deg
+invert(%)	反转图像，默认值为 0%，表示原始图像；100% 则表示完全反转，不允许使用负值
+opacity(%)	设置图像的不透明度，默认值为 100%，表示原始图像；0% 表示完全透明，不允许使用负值
+saturate(%)	设置图像的饱和度，默认值为 100%，表示原始图像；0% 表示图像完全不饱和，不允许使用负值
+sepia(%)	将图像转换为棕褐色，默认值为 0%，表示原始图像；100% 表示图像完全变成棕褐色，不允许使用负值
+url()	url() 函数用来指定一个 XML 文件，文件中设置了一个 SVG 滤镜，并且可以包含一个锚点来指定具体的滤镜元素
+initial	将属性设置为其默认值
+inherit	从父元素继承此属性的值
+ */
+
+
+div {
+    width: 200px;
+    height: 200px;
+    float: left;
+    position: relative;
+}
+
+div span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+img {
+    width: 100%;
+}
+
+div img.blur {
+    filter: blur(4px);
+}
+
+div img.brightness {
+    filter: brightness(250%);
+}
+
+div img.contrast {
+    filter: contrast(180%);
+}
+
+div img.grayscale {
+    filter: grayscale(100%);
+}
+
+div img.huerotate {
+    filter: hue-rotate(180deg);
+}
+
+div img.invert {
+    filter: invert(100%);
+}
+
+div img.opacity {
+    filter: opacity(50%);
+}
+
+div img.saturate {
+    filter: saturate(7);
+}
+
+div img.sepia {
+    filter: sepia(100%);
+}
+
+div img.shadow {
+    filter: drop-shadow(8px 8px 10px green);
+}
+    
