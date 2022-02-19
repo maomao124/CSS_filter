@@ -1,0 +1,32 @@
+/*
+  Project name(项目名称)：CSS_filter 
+  File name(文件名): t2
+  Author(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/2/19 
+  Time(创建时间)： 13:18
+  Version(版本): 1.0
+  Description(描述)： 无
+ */
+
+div {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+div span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+img {
+    width: 100%;
+    filter: sepia(90%) saturate(400%) brightness(150%);
+}
+    
